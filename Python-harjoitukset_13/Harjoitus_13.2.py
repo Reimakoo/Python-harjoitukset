@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 def findMe(icao):
     try:
-        icao = str.upper(icao)
+
         mycursor = connection.cursor()
         mycursor.execute('SELECT NAME, municipality FROM airport WHERE IDENT = "'+ icao +'";')
         find = mycursor.fetchone()
